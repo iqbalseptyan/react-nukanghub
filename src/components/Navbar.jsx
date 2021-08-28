@@ -1,40 +1,109 @@
 import React from "react";
-import {
-  Button,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import { Badge, Button, Form, FormControl, Image, Nav } from "react-bootstrap";
+import { BsBell } from "react-icons/bs";
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
-          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
-          </NavDropdown>
+    <>
+      <div className="d-flex justify-content-between align-content-center w-100">
+        <h2 className=" d-none d-lg-block w-100 align-self-center">
+          Welcome, Iwan Hi
+        </h2>
+        <Nav className="justify-content-end w-100" activeKey="/home">
+          <Form inline className="d-none d-lg-block align-self-center ">
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-primary">Search</Button>
+          </Form>
+          <Nav.Item className="align-self-center mr-sm-2 ">
+            <Nav.Link eventKey="link-2">
+              <BsBell size="28px" />
+              <Badge variant="light" className="position-absolute ">
+                9
+              </Badge>
+              <span className="sr-only">unread messages</span>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="align-self-center ">
+            <Nav.Link eventKey="disabled" disabled>
+              <Image
+                src="https://picsum.photos/200"
+                style={{
+                  backgroundColor: "black",
+                  borderRadius: "10px 0 10px 0",
+                  maxHeight: "50px",
+                  maxWidth: "50px",
+                }}
+              />
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
-        <Form inline>
+      </div>
+      {/* <Nav className="justify-content-end " activeKey="/home">
+        <Form inline className="d-none d-lg-block align-self-center ">
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-primary">Search</Button>
         </Form>
-      </Navbar.Collapse>
-    </Navbar>
+        <Nav.Item className="align-self-center mr-sm-2 ">
+          <Nav.Link eventKey="link-2">
+            <BsBell size="28px" />
+            <Badge variant="light" className="position-absolute ">
+              9
+            </Badge>
+            <span className="sr-only">unread messages</span>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="align-self-center ">
+          <Nav.Link eventKey="disabled" disabled>
+            <Image
+              src="https://picsum.photos/200"
+              style={{
+                backgroundColor: "black",
+                borderRadius: "10px 0 10px 0",
+                maxHeight: "50px",
+                maxWidth: "50px",
+              }}
+            />
+          </Nav.Link>
+        </Nav.Item>
+      </Nav> */}
+      {/* <Nav activeKey="/home" className="justify-content-end"> */}
+      {/* <div className="justify-content-between flex-row">
+          <div>1123123123</div>
+          <div>2123123131</div>
+        </div> */}
+      {/* <div className="align-self-center text-primary d-none d-lg-block">
+          <h2>Welcome, Iwan Hi </h2>
+        </div>
+        <div className="d-flex justify-content-between align-items-center">
+          <Form inline className="d-none d-lg-block">
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-primary">Search</Button>
+          </Form>
+          <Nav.Item className="align-self-center mr-sm-2 ">
+            <Nav.Link eventKey="link-2">
+              <BsBell size="28px" />
+              <Badge variant="light" className="position-absolute ">
+                9
+              </Badge>
+              <span className="sr-only">unread messages</span>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="align-self-center ">
+            <Nav.Link eventKey="disabled" disabled>
+              <Image
+                src="https://picsum.photos/200"
+                style={{
+                  backgroundColor: "black",
+                  borderRadius: "10px 0 10px 0",
+                  maxHeight: "50px",
+                  maxWidth: "50px",
+                }}
+              />
+            </Nav.Link>
+          </Nav.Item>
+        </div> */}
+      {/* </Nav> */}
+    </>
   );
 };
 
