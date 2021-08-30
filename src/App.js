@@ -4,14 +4,14 @@ import Sidebar from "./components/Sidebar";
 import { Accordion, Button, Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dashboard from "./components/Main/Dashboard";
+import Dashboard from "./components/Main/Dashboard/Dashboard";
 import Order from "./components/Main/Order";
 import Product from "./components/Main/Product";
 
 function App() {
   return (
     <Router>
-      <Container fluid>
+      <Container fluid className="text-primary">
         <Accordion defaultActiveKey="0">
           <div className="d-flex">
             <div>
