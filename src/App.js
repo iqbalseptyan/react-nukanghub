@@ -5,8 +5,9 @@ import { Accordion, Button, Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Main/Dashboard/Dashboard";
-import Order from "./components/Main/Order";
+import Order from "./components/Main/Orders/Order";
 import Product from "./components/Main/Product";
+import { FaBars } from "react-icons/fa";
 
 function App() {
   return (
@@ -19,16 +20,15 @@ function App() {
                 <Sidebar />
               </Accordion.Collapse>
             </div>
-            {/* d-flex align-items-center justify-content-between w-100 */}
             <div className="flex-grow-1">
               <div className="d-flex justify-content-between">
                 <Accordion.Toggle
                   as={Button}
                   variant="link"
                   eventKey="0"
-                  className="d-md-block d-lg-none"
+                  // className="d-md-block d-lg-none"
                 >
-                  Click me!
+                  <FaBars />
                 </Accordion.Toggle>
                 <NavbarComponent />
               </div>
