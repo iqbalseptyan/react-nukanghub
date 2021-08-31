@@ -1,5 +1,6 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { FormControl, InputGroup, Table } from "react-bootstrap";
+import { FaWhatsapp } from "react-icons/fa";
 
 const AllOrder = () => {
   return (
@@ -10,28 +11,49 @@ const AllOrder = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Pesanan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Hubungi Buyer</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>#200 Orlan Nguru</td>
+            <td>27 April 2021</td>
+            <td>Proses</td>
+            <td>Rp7,500.000</td>
+            <td>
+              <FaWhatsapp />
+            </td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>#200 Orlan Nguru</td>
+            <td>27 April 2021</td>
+            <td>Tahan</td>
+            <td>Rp7,500.000</td>
+            <td>
+              <FaWhatsapp />
+            </td>
           </tr>
           <tr>
-            <td>3</td>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>#200 Orlan Nguru</td>
+            <td>27 April 2021</td>
+            <td>Selesai</td>
+            <td>Rp7,500.000</td>
+            <td>
+              <FaWhatsapp />
+            </td>
           </tr>
         </tbody>
       </Table>
