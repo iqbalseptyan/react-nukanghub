@@ -6,7 +6,7 @@ import NavbarComponent from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Main/Dashboard/Dashboard";
 import Order from "./components/Main/Orders/Order";
-import Product from "./components/Main/Product";
+import Product from "./components/Main/Products/Product";
 import { FaBars } from "react-icons/fa";
 
 function App() {
