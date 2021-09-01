@@ -1,6 +1,7 @@
 import React from "react";
 import { Badge, Card, Col, Container, Media, Row } from "react-bootstrap";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { LinkContainer } from "react-router-bootstrap";
 import LineChart from "./LineChart";
 
 const Dashboard = () => {
@@ -87,10 +88,12 @@ const Dashboard = () => {
         <Col md="4">
           <div className="d-flex justify-content-between mb-3">
             <h5>Top selling product</h5>
-            <a href="asd">
-              See all
-              <MdKeyboardArrowRight />
-            </a>
+            <LinkContainer to="/product/all">
+              <a href="/product/all">
+                See all
+                <MdKeyboardArrowRight />
+              </a>
+            </LinkContainer>
           </div>
           <ul className="list-unstyled">
             <Media as="li">

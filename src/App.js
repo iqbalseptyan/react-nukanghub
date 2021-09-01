@@ -62,7 +62,7 @@ function App() {
               <Route path="/404">
                 <NoMatch />
               </Route>
-              <Redirect from="*" to="/404" />
+              <Redirect exact from="*" to="/404" />
             </Switch>
           </div>
         </div>
