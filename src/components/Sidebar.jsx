@@ -1,7 +1,6 @@
 import React from "react";
-// import { LinkContainer } from "react-router-bootstrap";
 import "./styles.css";
-import { Button, Image, Nav } from "react-bootstrap";
+import { Image, Nav } from "react-bootstrap";
 import {
   FaBullhorn,
   FaClipboardList,
@@ -63,65 +62,62 @@ const Sidebar = (props) => {
             {/* <span className="tooltip">Products</span> */}
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link
-              href="/marketing"
-              className={`${props.toggle ? "" : "flex-column"}`}
-            >
-              <FaBullhorn size={36} />
-              {props.toggle ? (
-                <span className="ml-3">Marketing</span>
-              ) : (
-                <small>Marketing</small>
-              )}
-            </Nav.Link>
+            <LinkContainer to="/marketing">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaBullhorn size={36} />
+                {props.toggle ? (
+                  <span className="ml-3">Marketing</span>
+                ) : (
+                  <small>Marketing</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
             {/* <span className="tooltip">Marketing</span> */}
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link
-              href="/rates"
-              className={`${props.toggle ? "" : "flex-column"}`}
-            >
-              <FaStar size={36} />
-              {props.toggle ? (
-                <span className="ml-3">Rates</span>
-              ) : (
-                <small>Rates</small>
-              )}
-            </Nav.Link>
+            <LinkContainer to="/rates">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaStar size={36} />
+                {props.toggle ? (
+                  <span className="ml-3">Rates</span>
+                ) : (
+                  <small>Rates</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
             {/* <span className="tooltip">Rates</span> */}
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link
-              href="/report"
-              className={`${props.toggle ? "" : "flex-column"}`}
-            >
-              <FaFileAlt size={36} />
-              {props.toggle ? (
-                <span className="ml-3">Reports</span>
-              ) : (
-                <small>Reports</small>
-              )}
-            </Nav.Link>
+            <LinkContainer to="/report">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaFileAlt size={36} />
+                {props.toggle ? (
+                  <span className="ml-3">Reports</span>
+                ) : (
+                  <small>Reports</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
             {/* <span className="tooltip">Reports</span> */}
           </Nav.Item>
         </div>
         {/* <div className="w-100 fixed-bottom"> */}
         <Nav.Item
-          as="li"
           className="position-absolute "
-          style={{ bottom: "0", left: "0" }}
+          style={{ bottom: "0", left: "5px" }}
         >
-          <Nav.Link
-            href="/logout"
-            className={`${props.toggle ? "" : "flex-column"}`}
-          >
-            <FaSignOutAlt size={36} />
-            {props.toggle ? (
-              <span className="ml-3">Logout</span>
-            ) : (
-              <small>Logout</small>
-            )}
-          </Nav.Link>
+          <LinkContainer to="/logout">
+            <Nav.Link
+              className={`${props.toggle ? "" : "d-flex  flex-column"}`}
+            >
+              <FaSignOutAlt size={36} />
+              {props.toggle ? (
+                <span className="ml-3">Logout</span>
+              ) : (
+                <small>Logout</small>
+              )}
+            </Nav.Link>
+          </LinkContainer>
           {/* <span className="tooltip">Logout</span> */}
         </Nav.Item>
         {/* </div> */}

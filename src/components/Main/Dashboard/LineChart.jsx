@@ -54,7 +54,7 @@ const LineChart = () => {
           },
           title: {
             display: true,
-            text: "Chart.js Line Chart",
+            text: "Sales statistics",
           },
         },
       }}

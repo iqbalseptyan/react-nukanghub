@@ -1,16 +1,15 @@
 import React from "react";
-import { Badge, Card, Col, Media, Row } from "react-bootstrap";
+import { Badge, Card, Col, Container, Media, Row } from "react-bootstrap";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import LineChart from "./LineChart";
 
 const Dashboard = () => {
   return (
-    <>
-      <h1>Dashboard</h1>
+    <Container fluid>
       <Row>
         <Col md="8">
           <Row className="justify-content-center ">
-            <Col sm="auto" md="6" className="d-flex align-items-stretch">
+            <Col sm="auto" md="5" className="d-flex  align-items-stretch">
               <Card
                 style={{
                   borderRadius: "20px 0 20px 0",
@@ -44,9 +43,9 @@ const Dashboard = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm="auto" md="6" className="d-flex align-items-stretch">
+            <Col sm="auto" md="7" className="d-flex align-items-stretch">
               <Card
-                className=""
+                className="m-auto"
                 style={{
                   borderRadius: "0 20px 0 20px",
                   backgroundColor: "#FCECB4",
@@ -157,7 +156,7 @@ const Dashboard = () => {
           </ul>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 };
 

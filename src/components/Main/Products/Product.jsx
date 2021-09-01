@@ -1,19 +1,33 @@
 import React from "react";
-import { Tabs, Tab } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AddProduct from "./AddProduct";
 import TableProduct from "./TableProduct";
 
 const Product = () => {
   return (
-    <h1>Product</h1>
-    // <Tabs id="controlled-tab-example">
-    //   <Tab eventKey="product" title="Product">
-    //     <TableProduct />
-    //   </Tab>
-    //   <Tab eventKey="profile" title="Add Product">
-    //     <AddProduct />
-    //   </Tab>
-    // </Tabs>
+    <Router>
+      <Container fluid>
+        <Nav variant="tabs" defaultActiveKey="/product">
+          <Nav.Item>
+            <LinkContainer exact to="/product">
+              <Nav.Link>Product</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+          <Nav.Item>
+            <LinkContainer exact to="/product/add">
+              <Nav.Link>Add Product</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+        </Nav>
+
+        <Switch>
+          <Route exact path="/product" component={TableProduct} />
+          <Route exact path="/product/add" component={AddProduct} />
+        </Switch>
+      </Container>
+    </Router>
   );
 };
 

@@ -1,14 +1,6 @@
 import React from "react";
 import "./styles.css";
-import {
-  Badge,
-  Button,
-  Container,
-  Form,
-  FormControl,
-  Image,
-  Nav,
-} from "react-bootstrap";
+import { Badge, Button, Form, FormControl, Image, Nav } from "react-bootstrap";
 import { BsBell } from "react-icons/bs";
 
 const NavbarComponent = (props) => {
@@ -37,9 +29,10 @@ const NavbarComponent = (props) => {
             style={{
               backgroundColor: "black",
               borderRadius: "10px 0 10px 0",
-              maxHeight: "50px",
-              maxWidth: "50px",
             }}
+            className="img-fluid"
+            width={48}
+            height={48}
           />
         </Nav.Link>
       </Nav.Item>
