@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbar";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -20,7 +20,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div
         className="d-flex"
         style={{
