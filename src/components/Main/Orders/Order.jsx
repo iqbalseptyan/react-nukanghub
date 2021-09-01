@@ -10,7 +10,7 @@ import {
   Row,
   Table,
 } from "react-bootstrap";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import AllOrder from "./AllOrder";
 import Process from "./Process";
@@ -25,7 +25,7 @@ const Order = () => {
         <Col lg="8">
           <Nav variant="tabs" defaultActiveKey="/home">
             <Nav.Item>
-              <LinkContainer to="/order">
+              <LinkContainer exact to="/order">
                 <Nav.Link>Semua (9)</Nav.Link>
               </LinkContainer>
             </Nav.Item>
@@ -57,7 +57,7 @@ const Order = () => {
           </Nav>
 
           <Switch>
-            <Route path="/order" component={AllOrder} />
+            <Route exact path="/order" component={AllOrder} />
             <Route path="/order/process" component={Process} />
             <Route path="/order/complete" component={CompleteOrder} />
             <Route path="/order/hold" component={HoldOrder} />

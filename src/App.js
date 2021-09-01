@@ -53,10 +53,7 @@ function App() {
             <Route exact path="/" component={Dashboard} />
             <Route path="/order" component={Order} />
             <Route path="/product" component={Product} />
-            <Route path="/404">
-              <NoMatch />
-            </Route>
-            <Redirect from="*" to="/404" />
+            <Route component={NoMatch} />
           </Switch>
         </div>
       </div>

@@ -88,7 +88,7 @@ const Dashboard = () => {
         <Col md="4">
           <div className="d-flex justify-content-between mb-3">
             <h5>Top selling product</h5>
-            <LinkContainer to="/product/all">
+            <LinkContainer exact to="/all">
               <a href="/product/all">
                 See all
                 <MdKeyboardArrowRight />
