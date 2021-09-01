@@ -5,14 +5,15 @@ import TableProduct from "./TableProduct";
 
 const Product = () => {
   return (
-    <Tabs id="controlled-tab-example">
-      <Tab eventKey="product" title="Product">
-        <TableProduct />
-      </Tab>
-      <Tab eventKey="profile" title="Add Product">
-        <AddProduct />
-      </Tab>
-    </Tabs>
+    <h1>Product</h1>
+    // <Tabs id="controlled-tab-example">
+    //   <Tab eventKey="product" title="Product">
+    //     <TableProduct />
+    //   </Tab>
+    //   <Tab eventKey="profile" title="Add Product">
+    //     <AddProduct />
+    //   </Tab>
+    // </Tabs>
   );
 };
 

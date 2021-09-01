@@ -1,67 +1,132 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
-import { Nav } from "react-bootstrap";
+// import { LinkContainer } from "react-router-bootstrap";
+import "./styles.css";
+import { Button, Image, Nav } from "react-bootstrap";
 import {
   FaBullhorn,
   FaClipboardList,
   FaFileAlt,
   FaHome,
+  FaSignOutAlt,
   FaStar,
   FaTshirt,
 } from "react-icons/fa";
 import logonukang from "../images/logo.png";
+import { LinkContainer } from "react-router-bootstrap";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
-    <>
-      <Nav as="ul" className="flex-column col-lg-12" variant="pills">
-        <Nav.Item as="li" className="align-self-center mb-2">
-          <img src={logonukang} alt="logo nukang" className="img-fluid" />
-        </Nav.Item>
-        <Nav.Item as="li" className="w-100 align-items-center">
-          <LinkContainer exact to="/">
-            <Nav.Link>
-              <FaHome size="36px" />
-              <span className="ml-2">Dashboard</span>
+    <div className={`sidebar  p-2 ${props.toggle ? "active" : ""}`}>
+      <div style={{ height: "80px" }} className=" d-flex align-items-center ">
+        <Image src={logonukang} className="img-fluid " />
+      </div>
+
+      <Nav variant="pills" as="ul" className="flex-column ">
+        <div className="w-100">
+          <Nav.Item as="li">
+            <LinkContainer to="/home">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaHome size={36} />
+                {props.toggle ? (
+                  <span className="ml-3"> Dashboard</span>
+                ) : (
+                  <small> Dashboard</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
+            {/* <span className="tooltip">Dashboard</span> */}
+          </Nav.Item>
+          <Nav.Item as="li">
+            <LinkContainer to="/order">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaClipboardList size={36} />
+                {props.toggle ? (
+                  <span className="ml-3"> Orders</span>
+                ) : (
+                  <small> Orders</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
+            {/* <span className="tooltip">Orders</span> */}
+          </Nav.Item>
+          <Nav.Item as="li">
+            <LinkContainer to="/product">
+              <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
+                <FaTshirt size={36} />
+                {props.toggle ? (
+                  <span className="ml-3">Products</span>
+                ) : (
+                  <small>Products</small>
+                )}
+              </Nav.Link>
+            </LinkContainer>
+            {/* <span className="tooltip">Products</span> */}
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link
+              href="/marketing"
+              className={`${props.toggle ? "" : "flex-column"}`}
+            >
+              <FaBullhorn size={36} />
+              {props.toggle ? (
+                <span className="ml-3">Marketing</span>
+              ) : (
+                <small>Marketing</small>
+              )}
             </Nav.Link>
-          </LinkContainer>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <LinkContainer exact to="/order">
-            <Nav.Link href="link-1">
-              <FaClipboardList size="36px" />
-              <span className="ml-2">Orders</span>
+            {/* <span className="tooltip">Marketing</span> */}
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link
+              href="/rates"
+              className={`${props.toggle ? "" : "flex-column"}`}
+            >
+              <FaStar size={36} />
+              {props.toggle ? (
+                <span className="ml-3">Rates</span>
+              ) : (
+                <small>Rates</small>
+              )}
             </Nav.Link>
-          </LinkContainer>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <LinkContainer exact to="/product">
-            <Nav.Link href="link-2">
-              <FaTshirt size="36px" />
-              <span className="ml-2">Products</span>
+            {/* <span className="tooltip">Rates</span> */}
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Nav.Link
+              href="/report"
+              className={`${props.toggle ? "" : "flex-column"}`}
+            >
+              <FaFileAlt size={36} />
+              {props.toggle ? (
+                <span className="ml-3">Reports</span>
+              ) : (
+                <small>Reports</small>
+              )}
             </Nav.Link>
-          </LinkContainer>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link href="link-2">
-            <FaBullhorn size="36px" />
-            <span className="ml-2">Marketing</span>
+            {/* <span className="tooltip">Reports</span> */}
+          </Nav.Item>
+        </div>
+        {/* <div className="w-100 fixed-bottom"> */}
+        <Nav.Item
+          as="li"
+          className="position-absolute "
+          style={{ bottom: "0", left: "0" }}
+        >
+          <Nav.Link
+            href="/logout"
+            className={`${props.toggle ? "" : "flex-column"}`}
+          >
+            <FaSignOutAlt size={36} />
+            {props.toggle ? (
+              <span className="ml-3">Logout</span>
+            ) : (
+              <small>Logout</small>
+            )}
           </Nav.Link>
+          {/* <span className="tooltip">Logout</span> */}
         </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link href="link-2">
-            <FaStar size="36px" />
-            <span className="ml-2">Rates</span>
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item as="li">
-          <Nav.Link href="link-2">
-            <FaFileAlt size="36px" />
-            <span className="ml-2">Reports</span>
-          </Nav.Link>
-        </Nav.Item>
+        {/* </div> */}
       </Nav>
-    </>
+    </div>
   );
 };
 

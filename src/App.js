@@ -1,46 +1,62 @@
-import "./App.scss";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./components/Sidebar";
-import { Accordion, Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Main/Dashboard/Dashboard";
 import Order from "./components/Main/Orders/Order";
 import Product from "./components/Main/Products/Product";
 import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <Router>
-      <Container fluid className="text-primary">
-        <Accordion defaultActiveKey="0">
-          <div className="d-flex">
-            <div>
-              <Accordion.Collapse eventKey="0">
-                <Sidebar />
-              </Accordion.Collapse>
+      <div
+        className="d-flex"
+        style={{
+          position: "relative",
+          height: "100vh",
+          width: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <Sidebar toggle={toggle} />
+        <div className={`main__content ${toggle ? "active" : ""}`}>
+          {/* Navbar */}
+          <Container
+            fluid
+            className="d-flex justify-content-between "
+            style={{ height: "80px" }}
+          >
+            <div className="d-flex align-items-center">
+              <FaBars
+                style={{ cursor: "pointer", marginRight: "5px" }}
+                onClick={() => setToggle(!toggle)}
+              />
+              <h2 className="d-none d-lg-flex">Welcome, Iwan Hi</h2>
             </div>
-            <div className="flex-grow-1">
-              <div className="d-flex justify-content-between">
-                <Accordion.Toggle
-                  as={Button}
-                  variant="link"
-                  eventKey="0"
-                  // className="d-md-block d-lg-none"
-                >
-                  <FaBars />
-                </Accordion.Toggle>
-                <NavbarComponent />
-              </div>
-              <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route exact path="/order" component={Order} />
-                <Route exact path="/product" component={Product} />
-              </Switch>
-            </div>
+            <NavbarComponent />
+          </Container>
+
+          <div
+            style={{
+              height: "calc(100% - 80px)",
+              overflowY: "auto",
+              overflowX: "hidden",
+            }}
+          >
+            <Switch>
+              <Route exact path="/home" component={Dashboard} />
+              <Route exact path="/order" component={Order} />
+              <Route exact path="/product" component={Product} />
+            </Switch>
           </div>
-        </Accordion>
-      </Container>
+        </div>
+      </div>
     </Router>
   );
 }
