@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-nukanghub/static/css/main.602fb1c8.chunk.css",
-    "main.js": "/react-nukanghub/static/js/main.f9c40501.chunk.js",
-    "main.js.map": "/react-nukanghub/static/js/main.f9c40501.chunk.js.map",
+    "main.js": "/react-nukanghub/static/js/main.cfa054ec.chunk.js",
+    "main.js.map": "/react-nukanghub/static/js/main.cfa054ec.chunk.js.map",
     "runtime-main.js": "/react-nukanghub/static/js/runtime-main.ecdeff2e.js",
     "runtime-main.js.map": "/react-nukanghub/static/js/runtime-main.ecdeff2e.js.map",
     "static/css/2.27dd871e.chunk.css": "/react-nukanghub/static/css/2.27dd871e.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.27dd871e.chunk.css",
     "static/js/2.c3c02eeb.chunk.js",
     "static/css/main.602fb1c8.chunk.css",
-    "static/js/main.f9c40501.chunk.js"
+    "static/js/main.cfa054ec.chunk.js"
   ]
 }
