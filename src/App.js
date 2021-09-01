@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbar";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -59,10 +59,10 @@ function App() {
               <Route exact path="/home" component={Dashboard} />
               <Route exact path="/order" component={Order} />
               <Route exact path="/product" component={Product} />
-              <Route path="/404">
+              {/* <Route path="/404">
                 <NoMatch />
               </Route>
-              <Redirect from="*" to="/404" />
+              <Redirect from="*" to="/404" /> */}
             </Switch>
           </div>
         </div>
