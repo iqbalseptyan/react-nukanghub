@@ -56,13 +56,13 @@ function App() {
             }}
           >
             <Switch>
-              <Route exact path="/home" component={Dashboard} />
+              <Route exact path="/" component={Dashboard} />
               <Route exact path="/order" component={Order} />
               <Route exact path="/product" component={Product} />
               <Route path="/404">
                 <NoMatch />
               </Route>
-              <Redirect exact from="*" to="/404" />
+              <Redirect from="*" to="/404" />
             </Switch>
           </div>
         </div>

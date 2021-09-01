@@ -23,7 +23,7 @@ const Sidebar = (props) => {
       <Nav variant="pills" as="ul" className="flex-column ">
         <div className="w-100">
           <Nav.Item as="li">
-            <LinkContainer to="/home">
+            <LinkContainer exact to="/">
               <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
                 <FaHome size={36} />
                 {props.toggle ? (
