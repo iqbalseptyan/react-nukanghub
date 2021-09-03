@@ -2,13 +2,13 @@ import React from "react";
 import "./styles.css";
 import { Image, Nav } from "react-bootstrap";
 import {
-  FaBullhorn,
   FaClipboardList,
   FaFileAlt,
   FaHome,
   FaSignOutAlt,
-  FaStar,
   FaTshirt,
+  FaUsers,
+  FaUserTie,
 } from "react-icons/fa";
 import logonukang from "../images/logo.png";
 import { LinkContainer } from "react-router-bootstrap";
@@ -62,26 +62,26 @@ const Sidebar = (props) => {
             {/* <span className="tooltip">Products</span> */}
           </Nav.Item>
           <Nav.Item as="li">
-            <LinkContainer to="/marketing">
+            <LinkContainer to="/tukang">
               <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
-                <FaBullhorn size={36} />
+                <FaUsers size={36} />
                 {props.toggle ? (
-                  <span className="ml-3">Marketing</span>
+                  <span className="ml-3">Tukang</span>
                 ) : (
-                  <small>Marketing</small>
+                  <small>Tukang</small>
                 )}
               </Nav.Link>
             </LinkContainer>
             {/* <span className="tooltip">Marketing</span> */}
           </Nav.Item>
           <Nav.Item as="li">
-            <LinkContainer to="/rates">
+            <LinkContainer to="/konsultan">
               <Nav.Link className={`${props.toggle ? "" : "flex-column"}`}>
-                <FaStar size={36} />
+                <FaUserTie size={36} />
                 {props.toggle ? (
-                  <span className="ml-3">Rates</span>
+                  <span className="ml-3">Konsultan</span>
                 ) : (
-                  <small>Rates</small>
+                  <small>Konsultan</small>
                 )}
               </Nav.Link>
             </LinkContainer>

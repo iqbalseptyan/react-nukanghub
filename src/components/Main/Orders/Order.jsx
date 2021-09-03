@@ -10,7 +10,7 @@ import {
   Row,
   Table,
 } from "react-bootstrap";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import AllOrder from "./AllOrder";
 import Process from "./Process";
