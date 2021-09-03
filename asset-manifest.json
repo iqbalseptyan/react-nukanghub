@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/react-nukanghub/static/css/main.602fb1c8.chunk.css",
-    "main.js": "/react-nukanghub/static/js/main.c365066a.chunk.js",
-    "main.js.map": "/react-nukanghub/static/js/main.c365066a.chunk.js.map",
+    "main.js": "/react-nukanghub/static/js/main.1e436368.chunk.js",
+    "main.js.map": "/react-nukanghub/static/js/main.1e436368.chunk.js.map",
     "runtime-main.js": "/react-nukanghub/static/js/runtime-main.ecdeff2e.js",
     "runtime-main.js.map": "/react-nukanghub/static/js/runtime-main.ecdeff2e.js.map",
     "static/css/2.27dd871e.chunk.css": "/react-nukanghub/static/css/2.27dd871e.chunk.css",
-    "static/js/2.d795f9e3.chunk.js": "/react-nukanghub/static/js/2.d795f9e3.chunk.js",
-    "static/js/2.d795f9e3.chunk.js.map": "/react-nukanghub/static/js/2.d795f9e3.chunk.js.map",
+    "static/js/2.64a73385.chunk.js": "/react-nukanghub/static/js/2.64a73385.chunk.js",
+    "static/js/2.64a73385.chunk.js.map": "/react-nukanghub/static/js/2.64a73385.chunk.js.map",
     "index.html": "/react-nukanghub/index.html",
     "static/css/2.27dd871e.chunk.css.map": "/react-nukanghub/static/css/2.27dd871e.chunk.css.map",
     "static/css/main.602fb1c8.chunk.css.map": "/react-nukanghub/static/css/main.602fb1c8.chunk.css.map",
-    "static/js/2.d795f9e3.chunk.js.LICENSE.txt": "/react-nukanghub/static/js/2.d795f9e3.chunk.js.LICENSE.txt",
+    "static/js/2.64a73385.chunk.js.LICENSE.txt": "/react-nukanghub/static/js/2.64a73385.chunk.js.LICENSE.txt",
     "static/media/logo.14d8c159.png": "/react-nukanghub/static/media/logo.14d8c159.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ecdeff2e.js",
     "static/css/2.27dd871e.chunk.css",
-    "static/js/2.d795f9e3.chunk.js",
+    "static/js/2.64a73385.chunk.js",
     "static/css/main.602fb1c8.chunk.css",
-    "static/js/main.c365066a.chunk.js"
+    "static/js/main.1e436368.chunk.js"
   ]
 }
